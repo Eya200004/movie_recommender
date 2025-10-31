@@ -1,19 +1,15 @@
-🎬 Movie Recommender - Web Application
-Description
+# 🎬 Movie Recommender - Web Application
 
-Application web interactive en Python pour recommander des films à partir du dataset MovieLens Small
-.
+## Description
 
-Cette interface permet à l’utilisateur de trouver des films selon différents critères :
+Application web interactive en **Python** pour recommander des films à partir du dataset [MovieLens Small](https://grouplens.org/datasets/movielens/).
 
-Genre (Action, Comedy, Drama…)
+Cette interface permet à l’utilisateur de **trouver des films selon différents critères** :
 
-Année de sortie
+- 🎭 **Genre** : Action, Comedy, Drama…  
+- 📅 **Année de sortie**  
+- 🔍 **Mot(s) présent dans le titre**  
+- ⭐ **Note minimale moyenne**  
+- 🎞️ **Films similaires à un film existant** (content-based)
 
-Mot(s) présent dans le titre
-
-Note minimale moyenne
-
-Films similaires à un film existant (content-based)
-
-L’utilisateur peut interagir facilement avec des sliders, champs de texte et menus déroulants, sans utiliser la console.
+L’utilisateur peut interagir facilement avec des **sliders**, **champs de texte** et **menus déroulants**, sans utiliser la console.
