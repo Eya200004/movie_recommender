@@ -1,31 +1,44 @@
 import streamlit as st
 from recommender import recommend_advanced, movies
-
 st.set_page_config(
     page_title="Recommandation de Films",
     page_icon="🎬",
     layout="wide"
 )
-
 st.markdown("""
 <style>
+
 .stApp{
     background: linear-gradient(135deg, #1d1d1d, #2c2c2c);
     color: white;
 }
-.css-1p3g8cg, label, .stSelectbox label, .stTextInput label{
-    color: #f5c518 !important; /* Jaune IMDb */
+label, .stSelectbox label, .stTextInput label{
+    color: #f5c518 !important; 
     font-weight: 600;
 }
-input, select, textarea{
+input, select, textarea, .stTextInput input, .stSelectbox div[data-baseweb="select"]{
     background-color: #3a3a3a !important;
     color: white !important;
     border: 1px solid #555 !important;
     border-radius: 10px !important;
     padding: 8px !important;
 }
-div[data-baseweb="slider"] * {
+div[data-baseweb="select"] > div{
+    background-color: #3a3a3a !important;
     color: white !important;
+}
+.stButton button{
+    background-color: #3a3a3a !important;
+    color: #f5c518 !important;
+    border: 2px solid #f5c518 !important;
+    padding: 10px 20px !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    transition: 0.3s;
+}
+.stButton button:hover{
+    background-color: #f5c518 !important;
+    color: #000 !important;
 }
 .card{
     background-color:#222;
@@ -34,33 +47,14 @@ div[data-baseweb="slider"] * {
     border-radius:15px;
     box-shadow:0 0 10px rgba(255,255,255,0.1);
 }
-
 h1, h2, h3{
     color: #f5c518 !important;
 }
-/* Style du bouton Streamlit */
-.stButton button{
-    background-color: #333333 !important;
-    color: #f5c518 !important;
-    border: 1px solid #f5c518 !important;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-.stButton button:hover{
-    background-color: #f5c518 !important;
-    color: black !important;
-    border: 1px solid #f5c518 !important;
-    transform: scale(1.05);
-}
-
 </style>
 """, unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align:center;'>🎬 Film Recommender Pro</h1>", unsafe_allow_html=True)
 st.write("<p style='text-align:center; font-size:18px;'>Un système intelligent de recommandation multi-critères.</p>", unsafe_allow_html=True)
-
 st.markdown("---")
 
 col1, col2, col3 = st.columns(3)
