@@ -9,35 +9,25 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-
-/* Background dégradé */
-.stApp {
+.stApp{
     background: linear-gradient(135deg, #1d1d1d, #2c2c2c);
     color: white;
 }
-
-/* Labels des champs */
-.css-1p3g8cg, label, .stSelectbox label, .stTextInput label {
+.css-1p3g8cg, label, .stSelectbox label, .stTextInput label{
     color: #f5c518 !important; /* Jaune IMDb */
     font-weight: 600;
 }
-
-/* Text input + select + slider narration */
-input, select, textarea {
+input, select, textarea{
     background-color: #3a3a3a !important;
     color: white !important;
     border: 1px solid #555 !important;
     border-radius: 10px !important;
     padding: 8px !important;
 }
-
-/* Forces slider text and other tooltip text to white */
 div[data-baseweb="slider"] * {
     color: white !important;
 }
-
-/* Cards */
-.card {
+.card{
     background-color:#222;
     padding:15px;
     margin:10px;
@@ -45,20 +35,34 @@ div[data-baseweb="slider"] * {
     box-shadow:0 0 10px rgba(255,255,255,0.1);
 }
 
-h1, h2, h3 {
+h1, h2, h3{
     color: #f5c518 !important;
+}
+/* Style du bouton Streamlit */
+.stButton button{
+    background-color: #333333 !important;
+    color: #f5c518 !important;
+    border: 1px solid #f5c518 !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.stButton button:hover{
+    background-color: #f5c518 !important;
+    color: black !important;
+    border: 1px solid #f5c518 !important;
+    transform: scale(1.05);
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# --- TITRE ---
 st.markdown("<h1 style='text-align:center;'>🎬 Film Recommender Pro</h1>", unsafe_allow_html=True)
 st.write("<p style='text-align:center; font-size:18px;'>Un système intelligent de recommandation multi-critères.</p>", unsafe_allow_html=True)
 
 st.markdown("---")
 
-# --- COLONNES ---
 col1, col2, col3 = st.columns(3)
 
 with col1:
