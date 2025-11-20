@@ -1,14 +1,12 @@
 import streamlit as st
 from recommender import recommend_advanced, movies
 
-# --- CONFIGURATION ---
 st.set_page_config(
     page_title="Recommandation de Films",
     page_icon="🎬",
     layout="wide"
 )
 
-# --- CSS PERSONNALISÉ ---
 st.markdown("""
 <style>
 
@@ -78,13 +76,10 @@ with col3:
     )
 
 st.markdown(" ")
-
-# --- BOUTON ---
 center = st.columns(3)
 with center[1]:
     run = st.button(" Recommander", use_container_width=True)
 
-# --- RÉSULTATS ---
 if run:
     st.markdown("---")
     st.markdown("<h2> Films recommandés :</h2>", unsafe_allow_html=True)
